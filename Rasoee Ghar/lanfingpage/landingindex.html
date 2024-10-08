@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="landingcss.css">
+  <link rel="stylesheet" href="email.css">
+  <link rel="stylesheet" href="cart.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <header id="navv">
+    <nav>
+      <h6><button type="button" class="btn btn-success " data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Location<i class="fa-solid fa-map-pin"></i>
+        </button></h6>
+      <h1><a href="#navv">Rasoee Gh<i class="fa-solid fa-utensils"></i>r</a></h1>
+      <h4> <button class="btn btn-success" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop"
+          aria-controls="offcanvasTop">Sign In</button>
+        <!-- <button class="btn btn-success" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">  <i class="fa-solid fa-cart-shopping"></i>  </button> -->
+        <div class="icon-cart">
+          <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1" />
+          </svg>
+          <span id="v"></span>
+        </div>
+        <a > <button class="btn btn-danger" id="nav-i" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa-solid fa-bars" id="nav-i"></i> </button>
+        </a>
+      </h4>
+
+
+
+    </nav>
+    <div class="ghar">
+      <h1>Rasoee GhAr</h1>
+
+      <h4>Ghar Ka Khana? </h4>
+      <h5>Idhar milega.</h5>
+
+      <div class="search"><label for="search"><i class="fa-solid fa-magnifying-glass"></i></label><input type="text"
+          id="search"></div>
+    </div>
+
+  </header>
+  <div class="cartTab">
+    <h1> Cart</h1>
+    <div class="listCart" id="cartu">
+      Total Item - <b id="c">5</b>
+      <ol id="hello"></ol>
+
+    </div>
+    <div class="btn">
+      <button class="close">CLOSE</button>
+      <button class="checkOut">Check Out</button>
+    </div>
+  </div>
+
+
+  <main>
+    <section class="upperpage">
+      <div id="animContainer"> </div>
+
+
+
+    </section>
+    <div class="foodchoice">
+      <div id="clickd"><i class="fa-solid fa-seedling"></i>Veg</div>
+      <div id="noclick"><i class="fa-solid fa-drumstick-bite"></i>Non-Veg</div>
+    </div>
+    <div id="vegnon">
+      <div class="veg">
+        <div class="card" style="width: 18rem;">
+          <div class="foodimg1 foodsize" id="1"></div>
+          <div class="card-body">
+            <h5 class="card-title"><img src="landingimg/veg.127981ad8e26a9d8.png" alt="">Butter Paneer--₹155</h5>
+            <p class="card-text">A creamy and flavorful Indian delicacy that will melt in your mouth ,bursting with
+              flavors.</p>
+            <a class="btn btn-primary" onclick="add('Butter-Paneer--₹155')">Add To Cart</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <div class="foodimg2 foodsize"></div>
+          <div class="card-body">
+            <h5 class="card-title"><img src="landingimg/veg.127981ad8e26a9d8.png" alt="">Mix-Veg--₹115</h5>
+            <p class="card-text">A delectable medley of fresh vegetables, bursting with flavors and textures.</p>
+            <a class="btn btn-primary" onclick="add('Mix-Veg--₹115')">Add To Cart</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <div class="foodimg3 foodsize"></div>
+          <div class="card-body">
+            <h5 class="card-title"><img src="landingimg/veg.127981ad8e26a9d8.png" alt="">Aloo-Gobi--₹115</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a class="btn btn-primary" onclick="add('Aloo-Gobi--₹115')">Add To Cart</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <div class="foodimg4 foodsize"></div>
+          <div class="card-body">
+            <h5 class="card-title"><img src="landingimg/veg.127981ad8e26a9d8.png" alt="">Khadi-Paneer--₹150</h5>
+            <p class="card-text">Indian dish consisting of succulent paneer cooked in a rich and aromatic tomato-based
+              gravy.</p>
+            <a class="btn btn-primary " onclick="add('Khadi-Paneer--₹150')">Add To Cart</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <div class="foodimg5 foodsize"></div>
+          <div class="card-body">
+            <h5 class="card-title"><img src="landingimg/veg.127981ad8e26a9d8.png" alt="">Handi-Paneer--₹160</h5>
+            <p class="card-text">Succulent paneer cubes cooked in a spicy and tangy chili gravy, offering a rich flavor
+              in every bite.</p>
+            <a class="btn btn-primary" onclick="add('Handi-Paneer--₹160')">Add To Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="nonveg">
+        <div class="card" style="width: 18rem;">
+          <div class="foodimg foodsize"></div>
+          <div class="card-body">
+            <h5 class="card-title"><img src="landingimg/non-veg.747bc17ee2abaf3b.png">Butter-Chicken--₹260</h5>
+            <p class="card-text">A blend of tender chicken and rich sauce, this main course is sure to satisfy meat
+              lovers.</p>
+            <a class="btn btn-primary" onclick="add('Butter-Chicken--₹260')">Add To Cart</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <div class="foodimg6 foodsize"></div>
+          <div class="card-body">
+            <h5 class="card-title"><img src="landingimg/non-veg.747bc17ee2abaf3b.png">Fish-Curry--₹200</h5>
+            <p class="card-text">Fish grilled on a hot plate with a blend of spices, creating a smoky flavor perfect for
+              seafood lovers.</p>
+            <a class="btn btn-primary" onclick="add('Fish-Curry--₹200')">Add To Cart</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <div class="foodimg7 foodsize"></div>
+          <div class="card-body">
+            <h5 class="card-title"><img src="landingimg/non-veg.747bc17ee2abaf3b.png">Mutton-Curry--₹300</h5>
+            <p class="card-text">Yummy mutton chunks with bone team up with diced onions and aromatic spices in this
+              spicy.</p>
+            <a class="btn btn-primary" onclick="add('Mutton-Curry--₹300')">Add To Cart</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <div class="foodimg8 foodsize"></div>
+          <div class="card-body">
+            <h5 class="card-title"><img src="landingimg/non-veg.747bc17ee2abaf3b.png">Chicken-Curry--₹220</h5>
+            <p class="card-text">Tender chicken pieces simmered in a rich, spiced gravy, offering a comforting and
+              classic main course.</p>
+            <a class="btn btn-primary" onclick="add('Chicken-Curry--₹220')">Add To Cart</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <div class="foodimg9 foodsize">
+
+          </div>
+          <div class="card-body">
+            <h5 class="card-title"><img src="landingimg/non-veg.747bc17ee2abaf3b.png">Egg-Curry--₹190</h5>
+            <p class="card-text">A flavorful and aromatic dish featuring boiled eggs simmered in a spiced tomato and
+              onion gravy.</p>
+            <a class="btn btn-primary" onclick="add('Egg-Curry--₹190')">Add To Cart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="extras" id="rice">
+      <img fetchpriority="high" decoding="async" width="420" height="265"
+        src="https://ghostkitchensindia.com/wp-content/uploads/2022/07/Ghost-Kitchen-Cloud-Kitchen-Setup-Service-Company-In-India-2.png"
+        class="attachment" alt=""
+        srcset="https://ghostkitchensindia.com/wp-content/uploads/2022/07/Ghost-Kitchen-Cloud-Kitchen-Setup-Service-Company-In-India-2.png 520w, https://ghostkitchensindia.com/wp-content/uploads/2022/07/Ghost-Kitchen-Cloud-Kitchen-Setup-Service-Company-In-India-2-300x211.png 300w"
+        sizes="(max-width: 420px) 100vw, 520px">
+      <div class="rotirice">
+        <p>Bread & Rice</p>
+
+      </div>
+
+
+      <div class=" extraposition">
+
+        <div class="card" style="width: 18rem;">
+          <div class="foodimg11 foodsize"></div>
+          <div class="card-body">
+            <h5 class="card-title"><img src="landingimg/veg.127981ad8e26a9d8.png" alt="">Tandoori-Roti--₹25</h5>
+            <p class="card-text">Soft, whole wheat flatbread baked in a tandoor, offering a warm and hearty
+              accompaniment to any meal.</p>
+            <a class="btn btn-primary" onclick="add('Tandoori-Roti--₹25')">Add To Cart</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <div class="foodimg12 foodsize"></div>
+          <div class="card-body">
+            <h5 class="card-title"><img src="landingimg/veg.127981ad8e26a9d8.png" alt="">Naan--₹40</h5>
+            <p class="card-text">A classic Indian flatbread baked in a tandoor oven, boasting a soft texture, and a hint
+              of smoky flavor.</p>
+            <a class="btn btn-primary" onclick="add('Naan--₹40')">Add To Cart</a>
+          </div>
+        </div>
+
+
+        <div class="card" style="width: 18rem;">
+          <div class="foodimg13 foodsize"></div>
+          <div class="card-body">
+            <h5 class="card-title"><img src="landingimg/veg.127981ad8e26a9d8.png" alt="">Rice--₹60</h5>
+            <p class="card-text">Dum cooked Basmati rice flavour with whole spices & Desi ghee. Best serve with any
+              curries.</p>
+            <a class="btn btn-primary" onclick="add('Rice--₹60')">Add To Cart</a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="aboutus">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="320" height="272"
+        viewBox="0 0 320 272" class="qutsvg">
+        <defs>
+          <path id="8s5hizfbwa" d="M0 0H320V271.111H0z" />
+        </defs>
+        <g fill="none" fill-rule="evenodd" opacity=".2">
+          <g>
+            <g transform="translate(-1046 -2076) translate(1046 2076)">
+              <mask id="4715i8f3qb" fill="#fff">
+                <use xlink:href="#8s5hizfbwa" />
+              </mask>
+              <path fill="#F47D38"
+                d="M72.98 145.847c-20.338-2.352-37.157-10.683-50.455-24.994C9.226 106.543 2.577 89.978 2.577 71.16c0-19.995 6.453-36.853 19.36-50.576C34.846 6.861 51.078 0 70.635 0c21.904 0 40.874 8.92 56.91 26.758 16.037 17.84 24.055 39.5 24.055 64.985 0 76.452-42.633 136.241-127.901 179.368L1.403 228.768c47.719-23.523 71.578-51.164 71.578-82.92zm168.989 0c-20.73-2.352-37.745-10.683-51.043-24.994-13.299-14.31-19.948-30.875-19.948-49.694 0-19.995 6.551-36.853 19.654-50.576C203.735 6.861 220.065 0 239.622 0c21.904 0 40.776 8.92 56.617 26.758C312.079 44.598 320 66.258 320 91.743c0 76.452-42.438 136.241-127.314 179.368l-22.882-42.343c48.11-23.523 72.165-51.164 72.165-82.92z"
+                mask="url(#4715i8f3qb)" />
+            </g>
+          </g>
+        </g>
+      </svg>
+
+      <div class="aboutwrite">
+
+        <h1>When in doubt, </h1> 
+        <h2 style="color: red;"> Order Desi!</h2>
+        <p>Too lazy to cook and want ghar ka khana? Tired of scrolling through<br> restaurants or stuck on a concall?
+          Whatever the reason,<br> When In Doubt, Order Desi!</p>
+        <p>From Butter Paneer to Aloo Gobi to Rice to Butter Chicken <br>to Mutton, we have all of your delicious Desi
+          Meals.</p>
+      </div>
+      <div class="aboutimg">
+        <img src="landingimg/friedchicken.jpeg" height="350px" width="250px">
+        <img src="landingimg/butterpaneer.jpeg" height="250px" width="180px">
+      </div>
+    </section>
+
+    <section class="us" id="u">
+      <h4>ABOUT US</h4>
+      <div class="line">
+        <hr>
+        <h2>How We Work ?</h2>
+        <hr>
+      </div>
+      <p style="text-align: center;">We maximize incremental sales and drive better margins with affordable,<br> low
+        risk expansion opportunities.</p>
+      <div class="about">
+
+        <div class="card img21" style="width: 18rem;">
+          <img src="landingimg/fooddelviery.webp" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h6>Pick the restaurant concept </h6>
+            <p class="card-text">We help you with aggregator on-boarding. Get started in 30 days.</p>
+          </div>
+        </div>
+        <div class="card img21" style="width: 18rem;">
+          <img src="landingimg/momkitcken.webp" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h6>Leverage your existing staff & equipment</h6>
+            <p class="card-text">Manage recipes & release purchase orders from the software</p>
+          </div>
+        </div>
+        <div class="card img21" style="width: 18rem;">
+          <img src="landingimg/fullfillorder.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h6>Fulfill delivery orders</h6>
+            <p class="card-text">Manage recipes & release purchase orders from the software</p>
+          </div>
+        </div>
+        <div class="card img21" style="width: 18rem;">
+          <img src="landingimg/profit.webp" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h6>Generate additional profits</h6>
+            <p class="card-text">Manage recipes & release purchase orders from the software</p>
+          </div>
+        </div>
+        <div class="card img21" style="width: 18rem;">
+          <img src="landingimg/staff.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h6>Simple reheating & assembly of food supplied by us</h6>
+            <p class="card-text">Follow our SOPs with video training</p>
+          </div>
+        </div>
+        <div class="card img21" style="width: 18rem;">
+          <img src="landingimg/Not-Convinced-Yet_.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h6>Not Convinced yet?</h6>
+            <p class="card-text">We are always here to help you, Just drop a message or a query.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="testimonials" id="t">
+      <h3 style="color: black;">What our Partners have to say about us!</h3>
+      <h1>Testimonials</h1>
+      <div class="video">
+        <video class="video-bg" autoplay muted loop>
+          <source src="landingimg/video.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="center">
+        <div class="test1">
+          "We partnered with Rasooe Ghar 1 year back and our daily order volume have increased 3x since then. It’s a
+          fabulous concept for restaurants struggling to do business especially on weekdays when your restaurant
+          walk-ins are slow and staff under-utilised. Happy with response"
+          <h4>Ravi Kumar , Pune</h4>
+        </div>
+        <div class="test1">
+          "We started our association with Rasoee Ghar about 4 months back and our business has been profitable from the
+          very first order! We have witnessed an increasing trend of daily sales from Rs.5,000/day to now Rs.25,000/day.
+          Their knowledge & guidance in running cloud kitchen business has been remarkable ."
+          <h4>NASREEN KHAN, Vashi</h4>
+        </div>
+        <div class="test1">
+          "Rasoee Ghar partnership with our restaurant has been an extremely eye-opening experience. Their expertise &
+          knowledge in aggregator functionality & management is unparalleled. Our revenues have doubled up over the last
+          6 months at zero additional investment."
+          <h4>Mohit acharya,Agra</h4>
+        </div>
+      </div>
+
+    </section>
+    <section id="Connect">
+      <h1>Let's Connect</h1>
+      <p> We help you maximize your kitchen profits by adding a plug-n-play food delivery <br> concept within your existing setup.</p>
+      <form class="row g-3 needs-validation" novalidate>
+        <div class="col-md-4 position-relative">
+          <label for="validationTooltip01" class="form-label">First name</label>
+          <input type="text" class="form-control" id="validationTooltip01" value="" required>
+          <div class="valid-tooltip">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-4 position-relative">
+          <label for="validationTooltip02" class="form-label">Last name</label>
+          <input type="text" class="form-control" id="validationTooltip02" value="" required>
+          <div class="valid-tooltip">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-4 position-relative">
+          <label for="validationTooltipUsername" class="form-label">E-mail</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+            <input type="text" class="form-control" id="validationTooltipUsername"
+              aria-describedby="validationTooltipUsernamePrepend" required>
+            <div class="invalid-tooltip">
+              Please choose a unique and valid username.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 position-relative">
+          <label for="validationTooltip03" class="form-label">City</label>
+          <input type="text" class="form-control" id="validationTooltip03" required>
+          <div class="invalid-tooltip">
+            Please provide a valid city.
+          </div>
+        </div>
+        <div class="col-md-3 position-relative">
+          <label for="validationTooltip04" class="form-label">State</label>
+          <select class="form-select" id="validationTooltip04" required>
+            <option selected disabled value="">Choose...</option>
+            <option>Uttar Pradesh</option>
+            <option value="">Delhi</option>
+            <option value="">Agra</option>
+          </select>
+          <div class="invalid-tooltip">
+            Please select a valid state.
+          </div>
+        </div>
+        <div class="col-md-3 position-relative">
+          <label for="validationTooltip05" class="form-label">Zip</label>
+          <input type="text" class="form-control" id="validationTooltip05" required>
+          <div class="invalid-tooltip">
+            Please provide a valid zip.
+          </div>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">Submit form</button>
+        </div>
+      </form>
+
+
+
+
+    </section>
+    <footer>
+      <img loading="lazy" decoding="async" width="275" height="400"
+        src="https://ghostkitchensindia.com/wp-content/uploads/2022/07/Ghost-Kicthen-Pizza-Cloud-Kitchen.png"
+        class="attachment-large size-large" alt=""
+        srcset="https://ghostkitchensindia.com/wp-content/uploads/2022/07/Ghost-Kicthen-Pizza-Cloud-Kitchen.png 275w, https://ghostkitchensindia.com/wp-content/uploads/2022/07/Ghost-Kicthen-Pizza-Cloud-Kitchen-206x300.png 206w"
+        sizes="(max-width: 275px) 100vw, 275px">
+      <div class="foot1">
+        <h3 id="footrasoee"><span>R</span><span>a</span><span>s</span><span>o</span><span>e</span><span>e</span></h3>
+        <h3 id="footrasoee">Gh<i class="fa-solid fa-utensils"></i>r</h3>
+        <p>Generate more orders & more revenue out of <br> your kitchen.</p>
+        <h5><i class="fa-brands fa-facebook"></i><i class="fa-brands fa-instagram"></i></h5>
+
+      </div>
+      <div class="foot1">
+        <h2>QUICK LINK</h2>
+        <div class="links">
+          <a href="landingindex.html">Home</a>
+          <a href="#animContainer">Main Course</a>
+          <a href="#rice">Bread & Rice</a>
+          <a href="#u">About Us</a>
+          <a href="#t">Testimonials</a>
+
+
+        </div>
+      </div>
+      <div class="foot1">
+        <h2>OUR LOCTAION</h2>
+        <h6>49c, Shivpur Shabajganj Padari Bazar <br> Near Milan Chowk, <br>Uttar Pradesh, Gorakhpur.</h6>
+        <a href="#Connect"><button> Let's Connect</button></a>
+      </div>
+      <hr>
+      <div class="grid">
+        <p>Copyright © 2024 Rasooe Ghar Bharat</p>
+        <p><a href="">Developed by Tejhype.in</a></p>
+      </div>
+
+
+
+    </footer>
+
+
+
+
+    <section class="modalll">
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Enter The Location</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p class="showDetails"></p>
+            </div>
+            <div class="modal-footer">
+
+              <button type="button" class="btn btn-primary geoBtn">Get The Location</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="menu">
+
+      <div class="offcanvas offcanvas-end bdy" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+          <h5 id="offcanvasRightLabel"></h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close" id="full-i"></button>
+        </div>
+        <div class="offcanvas-body ">
+          <div class="links b" id="full">
+            <a href="#navv">Home</a>
+            <a href="#animContainer">Main Course</a>
+            <a href="#rice">Bread & Rice</a>
+            <a href="#u">About Us</a>
+            <a href="#t">Testimonials</a>
+            <a href="#Connect">Let's Connect</a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="signin">
+
+      <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+        <div class="offcanvas-header signinmain">
+          <h5 id="offcanvasTopLabel fw-bold  ">Sign-In</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+        </div>
+
+        <div class="offcanvas-body signinbody">
+          <div class="form">
+
+            <input type="email" id="email" placeholder="Enter Email...">
+            <div class="otpverify">
+              <input type="text" id="otp_inp" placeholder="Enter the OTP sent to your Email...">
+              <button class="btnn" id="otp-btn">Verify</button>
+            </div>
+            <button class="btnn" onclick="sendOTP()">Send OTP</button>
+          </div>
+        </div>
+      </div>
+    </section>
+     
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="landingjs.js"></script>
+    <script src="scroll.js"></script>
+    <script src="emailotp.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
