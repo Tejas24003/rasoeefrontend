@@ -72,17 +72,16 @@ h4{
     margin: 16px;
     font-size: xx-large;
 }
-button{
-    height: 50px;
+
+a{
+     height: 50px;
     width: 250px;
     border-radius: 5px;
     border: none;
-    
-    
+    margin: 5px;
+    padding: 10px;
     box-shadow: inset 2px 2px 5px rgba(0,0,0,.2),
     2px 2px 5px rgba(0,0,0,.2);
-}
-a{
     text-decoration: none;
     font-size: 30px;
     
@@ -90,14 +89,12 @@ a{
     color: #2E2B41;
    
 }
-button:hover{
-    
-    
-    box-shadow: inset 2px 2px 5px rgb(23, 145, 23),
-    2px 2px 5px rgb(23, 145, 23);
-}
+
 a:hover{
-    color: rgb(23, 145, 23);
+     box-shadow: inset 2px 2px 5px rgb(23, 145, 23),
+    2px 2px 5px rgb(23, 145, 23);
+     color: rgb(23, 145, 23);
+   
 
 }
 
