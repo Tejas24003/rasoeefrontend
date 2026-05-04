@@ -119,6 +119,10 @@ body.showCart .container{
     background-color: #eee;
     margin: 5px;
 }
+.cartTab .checkout{
+    background-color: #E8BC0E;
+    margin: 5px;
+}
 .listCart .item img{
     width: 100%;
 }
