@@ -438,3 +438,11 @@ footer hr{
     width: 100%;
  border: 1px solid white;
 }
+.grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    text-align: center;
+    height: fit-content;
+    margin: 0%;
+}
