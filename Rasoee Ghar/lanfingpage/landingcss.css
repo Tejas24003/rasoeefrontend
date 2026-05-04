@@ -405,11 +405,7 @@ footer{
 footer h3{
     letter-spacing: 15px;
 }
-footer img{
-    position: absolute;
-    right: -10px;
-    top: -40%;
-}
+
 footer h5{
     letter-spacing: 23px;
 }
@@ -437,28 +433,8 @@ footer h5{
     font-size: 30px;
     
 }
-.foot1 button{
-    margin-top: 16px;
-    background: transparent;
-    padding: 10px;
-    letter-spacing: 5px;
-    color: white;
-    outline: none;
-    border: 1px solid white;
 
-}
-.foot1 a{
-    text-decoration: none;
-}
 footer hr{
     width: 100%;
  border: 1px solid white;
-}
-.grid{
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    text-align: center;
-    height: fit-content;
-    margin: 0%;
 }
