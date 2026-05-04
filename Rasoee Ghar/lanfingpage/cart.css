@@ -117,6 +117,7 @@ body.showCart .container{
 }
 .cartTab .close{
     background-color: #eee;
+    margin: 5px;
 }
 .listCart .item img{
     width: 100%;
